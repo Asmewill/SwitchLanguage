@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\4e060c2d886a3f4bb9b490a76456d92c7adca36f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_c66eb5668e04df2914b2a8e34eb1b3ccab64173d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\AndroidSdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.0_2b60ad7bfffc58270e0520bfd00e8077b71f5690.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\477744668b22d1511300830c82f6a07ce2e6dcb6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_ab54f7f3578fcac83709196160fb8af78d5d0972.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\1f2f98d39f9e4b2360870d755dff436a96aec7b0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_cea6468b32366ebf32d3af62b9fac08672678045.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\8dd68d33d58f04a5518976dd545311106e7a47ba\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_51c093e04d4cb7dae1b64fd49e425870831dad0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\6c27295fef8d93addefcadfb7a1e8cc3aaddebd8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="f46121a7c3b3ba958fc27c39447ae205be23ac4a">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_74925e5f5d3fe71d376a81d469af9d045d9f7f6d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\b9c9093fa13fe96e638817d58bb6cc94958c096b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_0bd40b26b59bd9369995f72bf2c7716b6f5cdc45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\AndroidStudioInstall\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\gson-2.2.4_4a43cbe733b20fb2f140ebe1115afde8d5309753.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\03ac059dc0263202e664f66611a7f6392b3041b8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_cb1062ed5753a288c110720ef693967cd873d007.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\ee75fd2573d1ee8152bb293ea076555156387c1a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_df6e7a2b7bbc5124916e4111df734c3a955bcd0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\115acf40fcf208900fbb075ded2da7b75f5f7270\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_6d3f34334edc4871787cbe524105e5c77d91a37b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\e642979b873c9114407d8f7c1326e0b79f5558a2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_f0db3363c8b431d142af2e5696769e5590f479e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\21b79f0ce0b2a7d2378bfde5d32f276d3a53d56e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_5d4310c63fed5c9db8b0585846c1241ca4f7f01f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\e1a0cf8032c931f081b9a98787497a7fd93c5a29\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_02eacbe315ec87ef24e7d8d248b72b02fed0bd0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.1.0\931532e953a477f876f2de18c2e7f16eee01078f\constraint-layout-solver-1.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="931532e953a477f876f2de18c2e7f16eee01078f">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.1.0_b8ec73ec64ff4c05de65946d795e346d601b2db0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\pradmin\.android\build-cache\0498cab0eee5f16a1ca3cf072053ad25204b58c5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="F:\LanguageSwitchSpace\SwitchLanguage\app\build\intermediates\pre-dexed\debug\classes_1418a9980e92c35e4d607b6611c870f496c36b5d.jar" />
+    </item>
+
+</items>

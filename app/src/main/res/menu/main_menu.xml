@@ -4,4 +4,5 @@
     <item android:id="@+id/chinese" android:title="@string/chinese" app:showAsAction="never" />
     <item android:id="@+id/english" android:title="@string/english" app:showAsAction="never" />
     <item android:id="@+id/russian" android:title="@string/russian" app:showAsAction="never" />
+    <item android:id="@+id/bb" android:title="@string/bb" app:showAsAction="never" />
 </menu>

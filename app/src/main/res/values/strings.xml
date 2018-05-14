@@ -5,5 +5,7 @@
     <string name="english">English</string>
     <string name="chinese">中文</string>
     <string name="russian">русский</string>
+    <string name="bb">bb</string>
     <string name="secondact">Second Activity</string>
+    <string name="title_activity_test">TestActivity</string>
 </resources>

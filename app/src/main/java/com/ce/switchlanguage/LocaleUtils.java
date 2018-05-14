@@ -4,10 +4,15 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Build;
+import android.util.Base64;
 import android.util.DisplayMetrics;
 
-import com.google.gson.Gson;
-
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.StreamCorruptedException;
 import java.util.Locale;
 
 public class LocaleUtils {
@@ -24,6 +29,10 @@ public class LocaleUtils {
      */
     public static final Locale LOCALE_RUSSIAN = new Locale("ru");
     /**
+     * bb文
+     */
+    public static final Locale LOCALE_BB = new Locale("bb");
+    /**
      * 保存SharedPreferences的文件名
      */
     private static final String LOCALE_FILE = "LOCALE_FILE";
@@ -38,9 +47,13 @@ public class LocaleUtils {
      * @return Locale
      */
     public static Locale getUserLocale(Context pContext) {
-        SharedPreferences _SpLocale = pContext.getSharedPreferences(LOCALE_FILE, Context.MODE_PRIVATE);
-        String _LocaleJson = _SpLocale.getString(LOCALE_KEY, "");
-        return jsonToLocale(_LocaleJson);
+        Locale locale=getObject(pContext,LOCALE_KEY,Locale.class);
+       if(locale==null){
+           locale=Locale.CHINESE;
+       }else{
+           locale=getObject(pContext,LOCALE_KEY,Locale.class);
+       }
+        return locale;
     }
     /**
      * 获取当前的Locale
@@ -57,42 +70,11 @@ public class LocaleUtils {
         return _Locale;
     }
     /**
-     * 保存用户设置的Locale
-     * @param pContext Context
-     * @param pUserLocale Locale
-     */
-    public static void saveUserLocale(Context pContext, Locale pUserLocale) {
-        SharedPreferences _SpLocal=pContext.getSharedPreferences(LOCALE_FILE, Context.MODE_PRIVATE);
-        SharedPreferences.Editor _Edit=_SpLocal.edit();
-        String _LocaleJson = localeToJson(pUserLocale);
-        _Edit.putString(LOCALE_KEY, _LocaleJson);
-        _Edit.apply();
-    }
-    /**
-     * Locale转成json
-     * @param pUserLocale UserLocale
-     * @return json String
-     */
-    private static String localeToJson(Locale pUserLocale) {
-        Gson _Gson = new Gson();
-        return _Gson.toJson(pUserLocale);
-    }
-    /**
-     * json转成Locale
-     * @param pLocaleJson LocaleJson
-     * @return Locale
-     */
-    private static Locale jsonToLocale(String pLocaleJson) {
-        Gson _Gson = new Gson();
-        return _Gson.fromJson(pLocaleJson, Locale.class);
-    }
-    /**
      * 更新Locale
      * @param pContext Context
      * @param pNewUserLocale New User Locale
      */
     public static void updateLocale(Context pContext, Locale pNewUserLocale) {
-        if (needUpdateLocale(pContext, pNewUserLocale)) {
             Configuration _Configuration = pContext.getResources().getConfiguration();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                 _Configuration.setLocale(pNewUserLocale);
@@ -101,8 +83,9 @@ public class LocaleUtils {
             }
             DisplayMetrics _DisplayMetrics = pContext.getResources().getDisplayMetrics();
             pContext.getResources().updateConfiguration(_Configuration, _DisplayMetrics);
-            saveUserLocale(pContext, pNewUserLocale);
-        }
+            saveObject(pContext,LOCALE_KEY,pNewUserLocale);
+           // saveUserLocale(pContext, pNewUserLocale);
+
     }
     /**
      * 判断需不需要更新
@@ -113,4 +96,75 @@ public class LocaleUtils {
     public static boolean needUpdateLocale(Context pContext, Locale pNewUserLocale) {
         return pNewUserLocale != null && !getCurrentLocale(pContext).equals(pNewUserLocale);
     }
+
+    /**
+     * 针对复杂类型存储<对象>
+     *
+     * @param key
+     * @param object
+     */
+    public static void saveObject(Context context, String key, Object object) {
+        SharedPreferences sp = context.getSharedPreferences(LOCALE_FILE, 0);
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ObjectOutputStream out = null;
+        try {
+            out = new ObjectOutputStream(baos);
+            out.writeObject(object);
+            String objectVal = new String(Base64.encode(baos.toByteArray(), Base64.DEFAULT));
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putString(key, objectVal);
+            editor.commit();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (baos != null) {
+                    baos.close();
+                }
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    public static  <T> T getObject(Context context, String key, Class<T> clazz) {
+        SharedPreferences sp = context.getSharedPreferences(LOCALE_FILE, 0);
+        if (sp.contains(key)) {
+            String objectVal = sp.getString(key, null);
+            byte[] buffer = Base64.decode(objectVal, Base64.DEFAULT);
+            ByteArrayInputStream bais = new ByteArrayInputStream(buffer);
+            ObjectInputStream ois = null;
+            try {
+                ois = new ObjectInputStream(bais);
+                T t = (T) ois.readObject();
+                return t;
+            } catch (StreamCorruptedException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (bais != null) {
+                        bais.close();
+                    }
+                    if (ois != null) {
+                        ois.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return null;
+    }
+
+
 }
